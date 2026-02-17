@@ -1,3 +1,10 @@
+{{ 
+    config(
+        materialized='table',      
+        schema='l1_landing', 
+        database='sleekmart_oms'     
+    ) 
+}}
 SELECT
     CustomerID,
     FirstName,
@@ -12,4 +19,6 @@ SELECT
     CONCAT(FirstName, ' ', LastName) AS CustomerName
 FROM
     {{ source('landing', 'customers') }}
+    
+
     
