@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stg_load
+    database: sales_dwh
+    schema: raw
+    tables:
+      - name: customer_raw_1
+      - name: customer_raw_2
+      - name: customer_raw_3
